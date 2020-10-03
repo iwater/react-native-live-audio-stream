@@ -23,6 +23,7 @@ RCT_EXPORT_METHOD(start) {
     RCTLogInfo(@"start");
 
     [[AVAudioSession sharedInstance] setMode:AVAudioSessionModeVoiceChat error:nil];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
 
     _recordState.mIsRunning = true;
     
